@@ -1,9 +1,9 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
+const employees = [];
 // Collect employee data
 const collectEmployees = function() {
-  const employees = [];
   let again = true;
 
   while (again) {
@@ -13,7 +13,7 @@ const collectEmployees = function() {
     let sal = prompt("Enter employee's salary:") ;
     // Default to zero if no data is put in
     if (isNaN(sal)) {
-      salary = 0;
+      sal = 0;
     }
     // Create an employeeData object
     const employeeData = {
